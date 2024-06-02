@@ -20,7 +20,7 @@ const WelcomeScreen = () => {
       </div>
    <Link to="/home">
       <button className="bg-blue-500 text-white py-3 px-8 rounded-full flex items-center shadow-lg hover:bg-blue-600 transition duration-200">
-        <span className="material-icons mr-2">login</span>
+        <span className="material-icons mr-2"></span>
         Login with Google
       </button>
    </Link>
