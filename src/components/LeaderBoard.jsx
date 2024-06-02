@@ -40,14 +40,14 @@ const LeaderBoard = () => {
   return (
     <div className="min-h-screen bg-blue-100 p-4 w-[100vw]">
       <header className="text-center mb-6">
-        <h1 className="text-2xl font-bold">Leaderboard: Engineering</h1>
+        <h1 className="text-2xl font-bold text-black">Leaderboard: Engineering</h1>
       </header>
       <div className="flex justify-around mb-4">
-        <button className={`font-bold ${currentView === 'daily' ? 'text-blue-600' : ''}`} onClick={() => handleViewChange('daily')}>Daily</button>
-        <button className={`font-bold ${currentView === 'weekly' ? 'text-blue-600' : ''}`} onClick={() => handleViewChange('weekly')}>Weekly</button>
-        <button className={`font-bold ${currentView === 'monthly' ? 'text-blue-600' : ''}`} onClick={() => handleViewChange('monthly')}>Monthly</button>
+        <button className={`font-bold ${currentView === 'daily' ? 'text-blue-400' : ''}`} onClick={() => handleViewChange('daily')}>Daily</button>
+        <button className={`font-bold ${currentView === 'weekly' ? 'text-blue-400' : ''}`} onClick={() => handleViewChange('weekly')}>Weekly</button>
+        <button className={`font-bold ${currentView === 'monthly' ? 'text-blue-400' : ''}`} onClick={() => handleViewChange('monthly')}>Monthly</button>
       </div>
-      <div className="bg-white rounded-lg shadow-lg p-4">
+      <div className="bg-white rounded-lg shadow-lg p-4 text-black">
         {data[currentView].map((entry) => (
           <div key={entry.rank} className="flex items-center justify-between p-2">
             <div className="flex items-center">

@@ -108,14 +108,14 @@ const TodoList = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Title"
-            className="p-2 bg-white rounded-lg shadow-md"
+            className="p-2 bg-white rounded-lg shadow-md text-black"
           />
           <input
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Description"
-            className="p-2 bg-white rounded-lg shadow-md"
+            className="p-2 bg-white rounded-lg shadow-md text-black"
           />
           <button
             type="submit"

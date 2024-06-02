@@ -32,20 +32,20 @@ const FormulaSheets = () => {
 
   return (
     <div className="p-4 bg-gray-50 min-h-screen w-[100vw]">
-      <button onClick={() => window.history.back()} className="mb-4 flex items-center text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
+      <button onClick={() => window.history.back()} className="mb-4 flex bg-white items-center text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
         <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
         </svg>
         Back
       </button>
-      <h1 className="text-3xl font-bold mb-6">JEE Main Formula Sheets</h1>
+      <h1 className="text-3xl font-bold mb-6 text-black">JEE Main Formula Sheets</h1>
       <div className="mb-6">
-        <div className="flex border-b">
+        <div className="flex border-b bg-white">
           {['Physics', 'Chemistry', 'Mathematics'].map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`py-2 px-4 focus:outline-none ${activeTab === tab ? 'text-blue-600 border-blue-600 border-b-2' : 'text-gray-600'}`}
+              className={`py-2 px-4 focus:outline-none ${activeTab === tab ? 'text-blue-600 border-blue-600 border-b-2 bg-gray-200' : 'text-gray-700 bg-gray-200'}`}
             >
               {tab}
             </button>

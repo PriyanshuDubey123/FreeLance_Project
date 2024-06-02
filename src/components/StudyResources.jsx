@@ -21,7 +21,7 @@ const StudyResources = () => {
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen w-[100vw]">
-      <button onClick={() => window.history.back()} className="mb-6 flex items-center text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out">
+      <button onClick={() => window.history.back()} className="mb-6 flex items-center text-blue-500 hover:text-blue-700 transition duration-150 ease-in-out bg-white">
         <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
         </svg>

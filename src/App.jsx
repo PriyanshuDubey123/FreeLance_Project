@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Profile from './components/Profile';
-import Notification from './components/Notification';
-import Settings from './components/Settings';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
-import Header from './components/Header';
 import StudyResources from './components/StudyResources';
 import LeaderBoard from './components/LeaderBoard';
 import CreateTest, { QuestionComponent } from './components/CreateTest';
@@ -19,11 +13,7 @@ import FormulaSheets from './components/FormulaSheet';
 import Notes from './components/Notes';
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  
 
   return (
        <Router>

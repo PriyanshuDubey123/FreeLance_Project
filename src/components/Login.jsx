@@ -14,8 +14,8 @@ const WelcomeScreen = () => {
         
       </div>
 
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-2">Welcome to the new way</h1>
+      <div className="text-center mb-8 ">
+        <h1 className="text-3xl font-bold mb-2 text-black">Welcome to the new way</h1>
         <p className="text-xl text-blue-600">to Practice & Learn</p>
       </div>
    <Link to="/home">

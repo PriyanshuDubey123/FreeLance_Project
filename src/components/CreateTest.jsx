@@ -14,8 +14,8 @@ const Step1 = ({ onNext }) => (
 );
 
 const Step2 = ({ onNext, onPrevious }) => (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-    <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen text-black bg-gray-100 p-4">
+    <div className="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6">
       <h2 className="text-xl font-bold text-center mb-4">Generate Custom Test</h2>
       <div className="border-b border-gray-300 mb-6">
         <ul className="flex justify-center">
@@ -24,13 +24,13 @@ const Step2 = ({ onNext, onPrevious }) => (
       </div>
       <p className="text-center text-gray-700 mb-4">Select atleast 1 subject</p>
       <div className="space-y-4">
-        <button className="w-full flex items-center justify-between p-3 border rounded-lg hover:bg-gray-100">
+        <button className="w-full flex items-center justify-between p-3 border rounded-lg bg-gray-50 hover:bg-gray-100">
           <span className="text-orange-500">&#x1F4D2; Physics</span>
         </button>
-        <button className="w-full flex items-center justify-between p-3 border rounded-lg hover:bg-gray-100">
+        <button className="w-full flex items-center justify-between p-3 border rounded-lg bg-gray-50 hover:bg-gray-100">
           <span className="text-green-500">&#x1F9EA; Chemistry</span>
         </button>
-        <button className="w-full flex items-center justify-between p-3 border rounded-lg hover:bg-gray-100">
+        <button className="w-full flex items-center justify-between p-3 border rounded-lg bg-gray-50 hover:bg-gray-100">
           <span className="text-blue-500">&#x1F4D1; Mathematics</span>
         </button>
       </div>
@@ -64,8 +64,8 @@ const Step3 = ({onPrevious, onNext}) => {
     };
   
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-        <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+      <div className="flex flex-col text-black items-center justify-center min-h-screen bg-gray-100 p-4">
+        <div className="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6">
           <h2 className="text-xl font-bold text-center mb-4">Generate Custom Test</h2>
           <div className="border-b border-gray-300 mb-6">
             <ul className="flex justify-center">
@@ -79,7 +79,7 @@ const Step3 = ({onPrevious, onNext}) => {
               {[5, 10, 15].map((questions) => (
                 <button
                   key={questions}
-                  className={`p-3 border rounded-lg text-center ${selectedQuestions === questions ? 'bg-blue-100 border-blue-500' : 'hover:bg-gray-100'}`}
+                  className={`p-3 border rounded-lg text-center ${selectedQuestions === questions ? 'bg-blue-100 border-blue-500' : 'hover:bg-gray-100 bg-gray-50'}`}
                   onClick={() => handleQuestionsChange(questions)}
                 >
                   <span className="text-blue-500">&#x2753; {questions} Qs</span>
@@ -92,14 +92,14 @@ const Step3 = ({onPrevious, onNext}) => {
             <p className="text-lg font-semibold text-gray-700 mb-2">Test Duration: <span className="text-sm text-gray-500">(Choose b/w 5 and 120)</span></p>
             <div className="flex items-center justify-between">
               <button
-                className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+                className="p-2 bg-gray-200 text-black rounded-full hover:bg-gray-300"
                 onClick={() => handleDurationChange(-1)}
               >
                 &#x2796;
               </button>
               <span className="text-lg font-semibold text-gray-700 mx-4">{testDuration}</span>
               <button
-                className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+                className="p-2 bg-gray-200 text-black rounded-full hover:bg-gray-300"
                 onClick={() => handleDurationChange(1)}
               >
                 &#x2795;
@@ -142,8 +142,8 @@ const Step4 = ({ onNext, onPrevious }) => {
     ];
   
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-        <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+      <div className="flex flex-col items-center text-black justify-center min-h-screen bg-gray-100 p-4">
+        <div className="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6">
           <h2 className="text-xl font-bold text-center mb-4">Generate Custom Test</h2>
           <div className="border-b border-gray-300 mb-6">
             <ul className="flex justify-center">
@@ -154,14 +154,14 @@ const Step4 = ({ onNext, onPrevious }) => {
           <div className="mb-4">
             <div className="flex justify-between items-center mb-2">
               <h3 className="text-lg font-semibold text-blue-500">Mathematics</h3>
-              <button className="text-blue-500 text-sm">Hide Units &#x25B2;</button>
+              <button className="text-blue-500 text-sm bg-white">Hide Units &#x25B2;</button>
             </div>
             <p className="text-sm text-gray-600 mb-4">Select atleast 1 chapter</p>
             <div className="space-y-2">
               {chapters.map((chapter) => (
                 <div
                   key={chapter}
-                  className="flex items-center space-x-3 p-3 border rounded-lg hover:bg-gray-100 cursor-pointer"
+                  className="flex items-center space-x-3 p-3 border rounded-lg text-black hover:bg-gray-100 cursor-pointer"
                   onClick={() => toggleChapter(chapter)}
                 >
                   <input
@@ -209,8 +209,8 @@ const Step5 = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-black">
+      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md text-black">
         <div className="text-center mb-4">
           <h2 className="text-2xl font-semibold">Generate Custom Test</h2>
         </div>
@@ -218,7 +218,7 @@ const Step5 = () => {
           <h3 className="text-lg font-medium">Step 5: Review and Generate</h3>
           <p className="text-gray-600">Review test details and generate the test</p>
         </div>
-        <div className="bg-gray-100 p-4 rounded-md mb-4">
+        <div className="bg-gray-100 p-4 rounded-md mb-4 text-black">
           <div className="flex items-center mb-2">
             <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12l2 2 4-4M4 7h16M4 7v4a1 1 0 001 1h3m10-4v4a1 1 0 01-1 1h-3m4-10H4m4 0a4 4 0 018 0z" />
@@ -227,7 +227,7 @@ const Step5 = () => {
           </div>
           <p className="text-gray-600">5 Questions • 10 Mins</p>
         </div>
-        <div className="bg-gray-100 p-4 rounded-md mb-4">
+        <div className="bg-gray-100 text-black p-4 rounded-md mb-4">
           <h4 className="font-medium">Mathematics</h4>
           <p className="text-gray-600">Binomial Theorem • Complex Number • Determinants • Linear Programming • Mathematical Induction • Mathematical Reasoning • Matrices • Permutation Combination • Probability • Quadratic Equation • Sequences and Series • Statistics</p>
         </div>
@@ -250,11 +250,11 @@ const Step5 = () => {
 const ConfirmationModal = ({ onLater, onAttemptNow }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <div className="bg-white text-black p-6 rounded-lg shadow-lg w-full max-w-md">
         <div className="text-center mb-4">
           <h2 className="text-xl font-semibold">Do you want to start the test?</h2>
         </div>
-        <div className="bg-gray-100 p-4 rounded-md mb-4 flex justify-center items-center">
+        <div className="bg-gray-100 text-black p-4 rounded-md mb-4 flex justify-center items-center">
           <svg className="w-6 h-6 mr-2 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9 12l2 2 4-4M4 7h16M4 7v4a1 1 0 001 1h3m10-4v4a1 1 0 01-1 1h-3m4-10H4m4 0a4 4 0 018 0z" />
           </svg>
@@ -354,17 +354,17 @@ export const QuestionComponent = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 w-[100vw]">
-      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-black p-4 w-[100vw]">
+      <div className="bg-white text-black shadow-md rounded-lg p-6 w-full max-w-md">
         <div className="flex justify-between items-center mb-4">
           <span className="text-blue-500 font-semibold">{formatTime(timeRemaining)}</span>
           <div className="flex space-x-2">
-            <button className="bg-gray-200 p-2 rounded-full hover:bg-gray-300">
+            <button className="bg-gray-200 text-black p-2 rounded-full hover:bg-gray-300">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M4 7h16M4 7v4a1 1 0 001 1h3m10-4v4a1 1 0 01-1 1h-3m4-10H4m4 0a4 4 0 018 0z" />
               </svg>
             </button>
-            <button className="bg-gray-200 p-2 rounded-full hover:bg-gray-300">
+            <button className="bg-gray-200 text-black p-2 rounded-full hover:bg-gray-300">
               <svg className="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -432,10 +432,10 @@ const CreateTest = () => {
       <div className="min-h-screen bg-blue-100 p-4 w-[100vw]">
         <header className="text-center mb-6">
           <Link to="/home" className="text-black text-lg">←</Link>
-          <h1 className="text-2xl font-bold">Custom Tests</h1>
+          <h1 className="text-2xl font-bold text-black">Custom Tests</h1>
           <p className="text-gray-500">Create your own personalized test in just few steps and practice!</p>
         </header>
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg text-black">
           {step === 1 && <Step1 onNext={nextStep} />}
           {step === 2 && <Step2 onNext={nextStep} onPrevious={previousStep} />}
           {step === 3 && <Step3 onNext={nextStep} onPrevious={previousStep} />}
@@ -450,26 +450,26 @@ const CreateTest = () => {
     <div className="min-h-screen bg-blue-100 p-4 w-[100vw]">
       <header className="text-center mb-6">
         <Link to="/home" className="text-black text-lg">←</Link>
-        <h1 className="text-2xl font-bold">Custom Tests</h1>
+        <h1 className="text-2xl font-bold text-black">Custom Tests</h1>
         <p className="text-gray-500">Create your own personalized test in just few steps and practice!</p>
       </header>
       <div className="text-center mb-4">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg" onClick={startMultiStepForm}>
+        <button className="bg-blue-500 text-black px-4 py-2 rounded-lg" onClick={startMultiStepForm}>
           Create Test
         </button>
       </div>
       <section className="mb-4">
-        <h2 className="text-lg font-bold">🔥 Your custom tests</h2>
+        <h2 className="text-lg font-bold text-gray-700">🔥 Your custom tests</h2>
         <div className="mt-2">
-          <div className="bg-white p-4 rounded-lg shadow-md mb-2">
+          <div className="bg-white p-4 rounded-lg shadow-md mb-2 text-black">
             <h3 className="font-bold">Chapter Tests</h3>
             <p>No tests generated</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-md mb-2">
+          <div className="bg-white p-4 rounded-lg shadow-md mb-2 text-black">
             <h3 className="font-bold">Subject Tests</h3>
             <p>1 test generated</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-md mb-2">
+          <div className="bg-white p-4 rounded-lg shadow-md mb-2 text-black">
             <h3 className="font-bold">Part Tests</h3>
             <p>No tests generated</p>
           </div>

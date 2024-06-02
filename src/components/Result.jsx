@@ -19,8 +19,8 @@ const ResultComponent = () => {
   const score = calculateScore();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 w-[100vw]">
-      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+    <div className="flex flex-col items-center text-black justify-center min-h-screen bg-gray-100 p-4 w-[100vw]">
+      <div className="bg-white text-black shadow-md rounded-lg p-6 w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4">Result</h2>
         <p className="text-lg mb-4">Your Score: {score} / {questions.length}</p>
         <button

@@ -2,7 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
-    <footer className="flex justify-around p-4 bg-white dark:bg-gray-800 shadow-md">
+    <footer className="flex justify-around p-4 bg-white  shadow-md">
       {/* <Link to="/" className="text-center"> */}
         <span className="block text-xl">🏠</span>
         <p className="text-sm">Home</p>
