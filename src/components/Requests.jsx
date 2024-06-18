@@ -71,8 +71,8 @@ const navigate = useNavigate();
                       <h2 className="text-lg font-semibold text-black">{request.category}</h2>
                       <p className="text-gray-600">{request.description}</p>
                     </div>
-                    <button onClick={() => handleDeleteRequest(request.id)} className="text-gray-600">
-                      <FaTimes className=' text-red-500 bg-gray-100' />
+                    <button onClick={() => handleDeleteRequest(request.id)} className="text-red-500 bg-gray-100">
+                      <FaTimes />
                     </button>
                   </div>
                 ))
@@ -109,8 +109,8 @@ const navigate = useNavigate();
           <div className="bg-white p-6 rounded-lg shadow-lg w-80">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-black">Request</h2>
-              <button onClick={() => setShowModal(false)} className="text-gray-600">
-                <FaTimes className=' text-red-500 bg-gray-100'  />
+              <button onClick={() => setShowModal(false)} className=" text-red-500 bg-gray-100">
+                <FaTimes  />
               </button>
             </div>
             <p className="text-gray-600 mb-4">
