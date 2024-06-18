@@ -37,7 +37,7 @@ const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white p-6 w-[100vw]">
       <div className="max-w-md mx-auto">
-        <button className="text-xl mb-4 bg-gray-100" onClick={()=>navigate('/home')}>
+        <button className="text-xl mb-4 bg-gray-100 text-black" onClick={()=>navigate('/home')}>
           <AiOutlineArrowLeft />
         </button>
         <div className="flex justify-between items-center mb-6">
@@ -68,11 +68,11 @@ const navigate = useNavigate();
                 ongoingRequests.map((request) => (
                   <div key={request.id} className="p-4 mb-4 bg-gray-100 rounded-lg shadow flex justify-between items-center">
                     <div>
-                      <h2 className="text-lg font-semibold">{request.category}</h2>
+                      <h2 className="text-lg font-semibold text-black">{request.category}</h2>
                       <p className="text-gray-600">{request.description}</p>
                     </div>
                     <button onClick={() => handleDeleteRequest(request.id)} className="text-gray-600">
-                      <FaTimes className=' text-red-500 bg-inherit' />
+                      <FaTimes className=' text-red-500 bg-gray-100' />
                     </button>
                   </div>
                 ))
@@ -110,7 +110,7 @@ const navigate = useNavigate();
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-black">Request</h2>
               <button onClick={() => setShowModal(false)} className="text-gray-600">
-                <FaTimes className=' text-red-500' />
+                <FaTimes className=' text-red-500 bg-gray-100'  />
               </button>
             </div>
             <p className="text-gray-600 mb-4">

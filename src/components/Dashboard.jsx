@@ -319,7 +319,7 @@ const DashBoard = () => {
           </>
         )}
       </div>
-      <div className="bg-pink-100 rounded-lg shadow-lg p-6 w-11/12 max-w-4xl mt-5">
+      <div className="bg-pink-100 rounded-lg shadow-lg p-6 w-11/12 max-w-4xl mt-8">
         <h2 className="text-xl font-bold">Preparation Tracker</h2>
         <p className="text-md mt-2">Track your progress for upcoming exams</p>
         <div className="flex justify-end mt-4">
@@ -365,7 +365,7 @@ const DashBoard = () => {
     </div>
 
 
-    <div className=" bg-gray-100 flex flex-col items-center  md:mt-5 lg:mt-5">
+    <div className=" bg-gray-100 flex flex-col items-center mt-5">
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl mb-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">

@@ -5,7 +5,7 @@ const PYQVideoSolutions = () => {
   const [activeTab, setActiveTab] = useState('Engineering');
 
   return (
-    <div className=" mx-auto p-4 w-[100vw] absolute top-10 bg-white ">
+    <div className=" mx-auto p-4 w-[100vw] absolute top-0   h-[100vh] ">
       <div className="flex justify-center mb-4">
         <button
           className={` text-black bg-gray-100 px-4 py-2 ${activeTab === 'Engineering' ? 'border-b-2 border-blue-500' : ''}`}

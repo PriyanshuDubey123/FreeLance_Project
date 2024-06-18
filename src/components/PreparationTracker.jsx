@@ -22,7 +22,7 @@ const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white p-6 w-[100vw]">
       <div className="max-w-md mx-auto">
-        <button className="text-xl mb-4 cursor-pointer bg-gray-100" onClick={()=>navigate('/home')}>
+        <button className="text-xl mb-4 cursor-pointer bg-gray-100 text-black" onClick={()=>navigate('/home')}>
           <AiOutlineArrowLeft />
         </button>
         <h1 className="text-2xl font-bold mb-1 text-black">Preparation Trackers</h1>

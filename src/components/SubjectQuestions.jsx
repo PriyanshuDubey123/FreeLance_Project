@@ -103,13 +103,13 @@ const {subject} = location.state;
           <div className="flex space-x-2">
             <button
               onClick={() => handleTabChange(true)}
-              className={`text-sm px-3 py-1 border-b-2 ${showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600'}`}
+              className={` bg-white text-sm px-3 py-1 border-b-2 ${showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600'}`}
             >
               All Questions
             </button>
             <button
               onClick={() => handleTabChange(false)}
-              className={`text-sm px-3 py-1 border-b-2 ${!showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600'}`}
+              className={` bg-white text-sm px-3 py-1 border-b-2 ${!showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600'}`}
             >
               Topic-wise Qs
             </button>
