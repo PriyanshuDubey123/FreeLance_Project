@@ -85,16 +85,16 @@ const PhysicsDetails = () => {
     <div className="min-h-screen bg-gray-100 p-4 flex flex-col items-center w-[100vw]">
       <div className="w-full max-w-xl bg-white rounded-lg shadow-lg p-6">
         <div className="flex justify-between mb-4">
-          <button className="text-blue-500 text-sm" onClick={()=>navigate('/home')}>
+          <button className=" bg-blue-100 text-blue-500 text-sm" onClick={()=>navigate('/home')}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <div className="text-center">
-            <button className="text-blue-500 mx-2">View AP EAMCET</button>
-            <button className="text-blue-500 mx-2">{sub} Bookmarks</button>
+            <button className="text-blue-500 mx-2 bg-blue-100">View AP EAMCET</button>
+            <button className="text-blue-500 mx-2 bg-blue-100">{sub} Bookmarks</button>
           </div>
-          <button className="text-blue-500 text-sm">
+          <button className="text-blue-500 text-sm bg-blue-100">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18m-6 6 6-6-6-6" />
             </svg>
@@ -122,7 +122,7 @@ const PhysicsDetails = () => {
           ))}
         </ul>
         <div className="flex justify-between mt-6">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg" onClick={() => alert('Filter functionality here!')}>Filter</button>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg" >Filter</button>
           <button className="bg-blue-500 text-white px-4 py-2 rounded-lg" onClick={() => sortOrder === 'asc' ? sortChapters('desc') : sortChapters('asc')}>
             Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
           </button>

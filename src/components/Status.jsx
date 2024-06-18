@@ -107,14 +107,14 @@ const Status = () => {
     <div className="min-h-screen bg-gray-100 p-6 w-[100vw]">
       <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
         <div className="flex justify-between items-center mb-4">
-          <button onClick={prevSlide} className="text-2xl">
+          <button onClick={prevSlide} className="text-2xl bg-gray-100">
             <AiOutlineArrowLeft />
           </button>
           <div className="text-center">
-            <h1 className="text-xl font-bold">{slides[currentSlide].title}</h1>
+            <h1 className="text-xl font-bold text-black">{slides[currentSlide].title}</h1>
             <h2 className="text-lg font-semibold text-gray-600">{slides[currentSlide].subtitle}</h2>
           </div>
-          <button onClick={nextSlide} className="text-2xl">
+          <button onClick={nextSlide} className="text-2xl bg-gray-100">
             <AiOutlineArrowRight />
           </button>
         </div>

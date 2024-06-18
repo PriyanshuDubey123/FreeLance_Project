@@ -24,11 +24,11 @@ const ExamInformation = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-4 flex flex-col items-center w-[100vw]">
       <div className="w-full max-w-xl bg-white rounded-lg shadow-lg p-6">
-        <button className="text-blue-500 text-sm mb-4">How to Add Widget?</button>
-        <h1 className="text-2xl font-bold mb-4">📋 Exam Information</h1>
+        <button className="text-blue-500 text-sm mb-4 bg-blue-100">How to Add Widget?</button>
+        <h1 className="text-2xl font-bold mb-4 text-black">📋 Exam Information</h1>
         
         <div className="mb-6">
-          <h2 className="text-lg font-semibold mb-2">Exams You’re Preparing For</h2>
+          <h2 className="text-lg font-semibold mb-2 text-black">Exams You’re Preparing For</h2>
           {trackedExam ? (
             <div className="flex items-center justify-center bg-orange-100 rounded-lg p-4 mb-4">
               <div className="text-center text-gray-800">
@@ -48,7 +48,7 @@ const ExamInformation = () => {
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold mb-2">All Exams</h2>
+          <h2 className="text-lg font-semibold mb-2 text-black">All Exams</h2>
           <ul>
             {[
               { name: 'SRMJEE 2024', date: '21 Jun - 23 Jun', id: 1 },
@@ -58,9 +58,9 @@ const ExamInformation = () => {
             ].map((exam) => (
               <li key={exam.id} className="mb-4 flex justify-between items-center bg-gray-50 p-4 rounded-lg shadow-sm">
                 <div>
-                  <p className="font-semibold">{exam.name}</p>
+                  <p className="font-semibold text-gray-800">{exam.name}</p>
                   <p className="text-gray-500">{exam.date}</p>
-                  <button className="text-blue-500 text-sm mt-1">View Details</button>
+                  <button className="text-blue-500 text-sm mt-1 bg-blue-100">View Details</button>
                 </div>
                 {trackedExams[exam.id] && trackedExams[exam.id].tracked ? (
                   <button

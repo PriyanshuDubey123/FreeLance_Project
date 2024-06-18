@@ -13,25 +13,25 @@ const navigate = useNavigate();
     <div className="min-h-screen bg-gray-100 p-4 flex flex-col items-center w-[100vw]">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
 
-        <button className="text-blue-500 text-sm mb-4" onClick={()=>navigate('/home')}>
+        <button className="text-blue-500 text-sm mb-4 bg-white" onClick={()=>navigate('/home')}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <div className="flex items-center mb-4">
           <img src={logo} alt="Logo" className="w-10 h-10 mr-2" />
-          <h1 className="text-2xl font-bold">{name}</h1>
+          <h1 className="text-2xl font-bold text-black">{name}</h1>
         </div>
         <div className="flex justify-between mb-6">
-          <div className="text-center">
+          <div className="text-center text-gray-700">
             <p className="font-semibold">Year</p>
             <p>2023 - 2001</p>
           </div>
-          <div className="text-center">
+          <div className="text-center text-gray-700">
             <p className="font-semibold">Papers</p>
             <p>74</p>
           </div>
-          <div className="text-center">
+          <div className="text-center text-gray-700">
             <p className="font-semibold">Questions</p>
             <p>11920</p>
           </div>

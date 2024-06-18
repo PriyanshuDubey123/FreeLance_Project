@@ -51,8 +51,8 @@ const FormulaCard = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6 w-[100vw]">
-      <div className="flex items-center space-x-3 mb-6">
-        <AiOutlineArrowLeft className="text-2xl cursor-pointer" onClick={()=>navigate('/home')} />
+      <div className="flex items-center space-x-3 mb-6 text-black">
+        <AiOutlineArrowLeft className="text-2xl cursor-pointer " onClick={()=>navigate('/home')} />
         <h1 className="text-2xl font-bold">{chapterData}</h1>
       </div>
       <p className="text-gray-700 mb-8">40 Formula Cards</p>
@@ -71,8 +71,8 @@ const FormulaCard = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">All Topics</h2>
+      <div className="flex justify-between items-center mb-4 ">
+        <h2 className="text-lg font-bold text-gray-700">All Topics</h2>
         <p className="text-gray-700 font-bold">7 Topics</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

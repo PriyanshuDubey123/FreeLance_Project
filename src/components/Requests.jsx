@@ -37,12 +37,12 @@ const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white p-6 w-[100vw]">
       <div className="max-w-md mx-auto">
-        <button className="text-xl mb-4" onClick={()=>navigate('/home')}>
+        <button className="text-xl mb-4 bg-gray-100" onClick={()=>navigate('/home')}>
           <AiOutlineArrowLeft />
         </button>
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold">Requests</h1>
-          <button onClick={handleAddRequest} className="text-blue-500 font-semibold">New Request</button>
+          <h1 className="text-2xl font-bold text-black">Requests</h1>
+          <button onClick={handleAddRequest} className="text-blue-500 font-semibold bg-blue-100">New Request</button>
         </div>
         <p className="text-gray-600 mb-4">
           The faster a request gets the votes, the faster it goes LIVE. Ask your friends to vote. Power to you!
@@ -72,7 +72,7 @@ const navigate = useNavigate();
                       <p className="text-gray-600">{request.description}</p>
                     </div>
                     <button onClick={() => handleDeleteRequest(request.id)} className="text-gray-600">
-                      <FaTimes />
+                      <FaTimes className=' text-red-500 bg-inherit' />
                     </button>
                   </div>
                 ))
@@ -89,7 +89,7 @@ const navigate = useNavigate();
               {completedRequests.length > 0 ? (
                 completedRequests.map((request) => (
                   <div key={request.id} className="p-4 mb-4 bg-gray-100 rounded-lg shadow">
-                    <h2 className="text-lg font-semibold">{request.name}</h2>
+                    <h2 className="text-lg font-semibold text-black">{request.name}</h2>
                     <p className="text-gray-600">{request.description}</p>
                   </div>
                 ))
@@ -108,9 +108,9 @@ const navigate = useNavigate();
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
           <div className="bg-white p-6 rounded-lg shadow-lg w-80">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold">Request</h2>
+              <h2 className="text-xl font-bold text-black">Request</h2>
               <button onClick={() => setShowModal(false)} className="text-gray-600">
-                <FaTimes />
+                <FaTimes className=' text-red-500' />
               </button>
             </div>
             <p className="text-gray-600 mb-4">
@@ -120,7 +120,7 @@ const navigate = useNavigate();
               <select
                 value={newRequest.category}
                 onChange={(e) => setNewRequest({ ...newRequest, category: e.target.value })}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded text-black"
               >
                 <option value="" disabled>Choose Request Category</option>
                 <option value="Add New Exam Category">Add New Exam Category</option>
@@ -132,7 +132,7 @@ const navigate = useNavigate();
               <textarea
                 value={newRequest.description}
                 onChange={(e) => setNewRequest({ ...newRequest, description: e.target.value })}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded text-black"
                 placeholder="Describe your request here.."
               />
             </div>

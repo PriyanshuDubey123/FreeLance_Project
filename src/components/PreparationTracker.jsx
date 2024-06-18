@@ -22,10 +22,10 @@ const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white p-6 w-[100vw]">
       <div className="max-w-md mx-auto">
-        <button className="text-xl mb-4 cursor-pointer" onClick={()=>navigate('/home')}>
+        <button className="text-xl mb-4 cursor-pointer bg-gray-100" onClick={()=>navigate('/home')}>
           <AiOutlineArrowLeft />
         </button>
-        <h1 className="text-2xl font-bold mb-1">Preparation Trackers</h1>
+        <h1 className="text-2xl font-bold mb-1 text-black">Preparation Trackers</h1>
         <p className="text-gray-600 mb-6">Track your preparation for upcoming..</p>
         <div className="space-y-4">
           {trackers.map((tracker, index) => (
@@ -33,7 +33,7 @@ const navigate = useNavigate();
               <div className="flex items-center space-x-4">
                 <img src={tracker.icon} alt={tracker.name} className="w-10 h-10 rounded-full" />
                 <div>
-                  <h2 className="text-lg font-semibold">{tracker.name}</h2>
+                  <h2 className="text-lg font-semibold text-gray-800">{tracker.name}</h2>
                   <p className="text-sm text-gray-600">{tracker.students}</p>
                 </div>
               </div>

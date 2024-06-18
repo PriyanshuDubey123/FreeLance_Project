@@ -82,65 +82,65 @@ const location = useLocation();
 const {subject} = location.state;
 
   return (
-    <div className="px-20 w-[100vw]">
-      <header className="flex items-center justify-between mb-4">
+    <div className="px-4 md:px-10 lg:px-20  bg-white w-[100vw] py-2">
+      <header className="flex flex-col md:flex-row items-center justify-between mb-4 space-y-2 md:space-y-0 bg-blue-50 p-4 rounded-md shadow-md">
         <h1 className="text-xl font-bold text-blue-600">{subject}</h1>
         <div className="flex items-center space-x-2">
-          <button className="text-sm px-3 py-1 border rounded bg-gray-100">View Bookmarked Qs of this chapter</button>
+          <button className="text-sm px-3 py-1 border rounded bg-gray-100 text-blue-600 border-blue-600">View Bookmarked Qs of this chapter</button>
           <img width={30} height={30} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvDG5AOCaZCpXw6hVh8xLMoAxLVTn8hju9g&s" alt="" />
         </div>
       </header>
-      <section className="mb-4">
-        <div className="flex justify-between items-center mb-4">
+      <section className="mb-4 bg-gray-50 p-4 rounded-md shadow-md">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-2 md:space-y-0">
           <span className="text-sm text-gray-600">44Qs | Low Output Low Input</span>
-          <div className="flex space-x-4">
-            <button className="text-sm px-3 py-1 border rounded bg-blue-100">Challenge</button>
-            <button className="text-sm px-3 py-1 border rounded bg-blue-100">Create test</button>
-            <button className="text-sm px-3 py-1 border rounded bg-blue-100">Analysis</button>
+          <div className="flex space-x-2">
+            <button className="text-sm px-3 py-1 border rounded bg-blue-100 text-blue-600 border-blue-600">Challenge</button>
+            <button className="text-sm px-3 py-1 border rounded bg-blue-100 text-blue-600 border-blue-600">Create test</button>
+            <button className="text-sm px-3 py-1 border rounded bg-blue-100 text-blue-600 border-blue-600">Analysis</button>
           </div>
         </div>
-        <div className="flex justify-between items-center mb-4 border-b">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-4 border-b border-gray-300 space-y-2 md:space-y-0">
           <div className="flex space-x-2">
             <button
               onClick={() => handleTabChange(true)}
-              className={`text-sm px-3 py-1 border-b-2 ${showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent'}`}
+              className={`text-sm px-3 py-1 border-b-2 ${showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600'}`}
             >
               All Questions
             </button>
             <button
               onClick={() => handleTabChange(false)}
-              className={`text-sm px-3 py-1 border-b-2 ${!showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent'}`}
+              className={`text-sm px-3 py-1 border-b-2 ${!showAllQuestions ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600'}`}
             >
               Topic-wise Qs
             </button>
           </div>
-          <div className="flex items-center space-x-2">
-            <span className="text-sm">Showing</span>
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 space-x-0 md:space-x-2">
+            <span className="text-sm text-gray-600">Showing</span>
             <select
               value={selectedOption}
               onChange={handleSelectChange}
-              className="text-sm px-2 py-1 border rounded bg-white"
+              className="text-sm px-2 py-1 border rounded bg-white text-blue-600 border-blue-600"
             >
-              <option>All Qs</option>
-              <option>In Syllabus</option>
+              <option className="text-blue-600">All Qs</option>
+              <option className="text-blue-600">In Syllabus</option>
             </select>
-            <label className="flex items-center space-x-1">
+            <label className="flex items-center space-x-1 text-blue-600">
               <input
                 type="checkbox"
                 checked={hideOutOfSyllabus}
                 onChange={handleCheckboxChange}
-                className="form-checkbox"
+                className="form-checkbox text-blue-600 border-blue-600"
               />
               <span className="text-sm">Hide Out of Syllabus Qs</span>
             </label>
           </div>
         </div>
       </section>
-      <section>
+      <section className="bg-gray-50 p-4 rounded-md shadow-md">
         {displayedQuestions.map((question, index) => (
-          <div key={question.id} className="border-b py-2">
-            <h2 className="text-lg font-semibold">{String(index + 1).padStart(2, '0')}</h2>
-            <p className="text-sm">{question.text}</p>
+          <div key={question.id} className="border-b border-gray-300 py-2">
+            <h2 className="text-lg font-semibold text-blue-600">{String(index + 1).padStart(2, '0')}</h2>
+            <p className="text-sm text-gray-800">{question.text}</p>
             <span className="text-xs text-gray-500">{question.source}</span>
           </div>
         ))}
