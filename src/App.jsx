@@ -11,6 +11,15 @@ import TodoList from './components/TodoList';
 import WelcomeScreen from './components/Login';
 import FormulaSheets from './components/FormulaSheet';
 import Notes from './components/Notes';
+import ExamInformation from './components/ExamInformation';
+import ExamDetails from './components/ExamDetails';
+import PhysicsDetails from './components/ChaptersData';
+import MathInPhysics from './components/SubjectQuestions';
+import FormulaCard from './components/FormulaCard';
+import Status from './components/Status';
+import PreparationTracker from './components/PreparationTracker';
+import Requests from './components/Requests';
+import PYQVideoSolutions from './components/PYQquestions';
 
 const App = () => {
   
@@ -30,6 +39,15 @@ const App = () => {
       <Route path="/home/book" element={<TodoList/>} />
       <Route path="/home/formula" element={<FormulaSheets/>} />
       <Route path="/home/notes" element={<Notes/>} />
+      <Route path="/home/exam/information" element={<ExamInformation/>} />
+      <Route path="/home/exam/details" element={<ExamDetails/>} />
+      <Route path="/home/exam/details2" element={<PhysicsDetails/>} />
+      <Route path="/home/exam/page" element={<MathInPhysics/>} />
+      <Route path="/home/formula/card" element={<FormulaCard/>} />
+      <Route path="/home/status" element={<Status/>} />
+      <Route path="/home/preparation/tracker" element={<PreparationTracker/>} />
+      <Route path="/home/requests" element={<Requests/>} />
+      <Route path="/home/videos" element={<PYQVideoSolutions/>} />
         </Routes>
        </Router>
   );
